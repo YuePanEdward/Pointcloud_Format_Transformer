@@ -12,3 +12,8 @@ A Tool for KITTI Odometry Data
  sh run.sh
  # done
 ```
+
+## Reference
+https://github.com/yanii/kitti-pcl
+
+http://www.cvlibs.net/datasets/kitti/
