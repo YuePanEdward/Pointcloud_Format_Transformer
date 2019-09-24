@@ -1,12 +1,12 @@
 # PointCloud Format Transformer
-A Tool for various point cloud data format transformation for well-known datasets. 
+A Tool for various basic point cloud data format transformation for well-known datasets. 
 
 ## Functions
-### 1. KITTI Odometry bin2pcd
+#### 1. [KITTI Odometry Dataset](http://www.cvlibs.net/datasets/kitti/): bin2pcd
 
-### 2. ETH Registration csv2pcd
+#### 2. [ETH ASL Registration Dataset](https://projects.asl.ethz.ch/datasets/doku.php?id=laserregistration:laserregistration): csv2pcd
 
-### 3. 
+#### 3. [ETH PRS Registration Dataset](https://prs.igp.ethz.ch/research/completed_projects/automatic_registration_of_point_clouds.html): ply2pcd
 
 ## How to use
 
@@ -21,10 +21,4 @@ A Tool for various point cloud data format transformation for well-known dataset
  # done
 ```
 
-## Reference
-https://github.com/yanii/kitti-pcl
-
-http://www.cvlibs.net/datasets/kitti/
-
-https://projects.asl.ethz.ch/datasets/doku.php?id=laserregistration:laserregistration
 

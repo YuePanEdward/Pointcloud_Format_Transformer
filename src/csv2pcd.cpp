@@ -75,4 +75,6 @@ int main(int argc, char **argv){
 		PCL_ERROR("Couldn't write file\n");
 		return false;
 	}
+
+	std::cout<<"Transform done"<<std::endl;
 }

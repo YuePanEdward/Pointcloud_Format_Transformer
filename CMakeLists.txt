@@ -13,14 +13,20 @@ include_directories(
 
 link_directories(${PCL_LIBRARY_DIRS})
  
-add_executable(bin2pcd bin2pcd.cpp)   
+add_executable(bin2pcd src/bin2pcd.cpp)   
   
 target_link_libraries(bin2pcd
   ${PCL_LIBRARIES}
 )
 
-add_executable(csv2pcd csv2pcd.cpp)   
+add_executable(csv2pcd src/csv2pcd.cpp)   
   
 target_link_libraries(csv2pcd
+  ${PCL_LIBRARIES}
+)
+
+add_executable(ply2pcd src/ply2pcd.cpp)   
+  
+target_link_libraries(ply2pcd
   ${PCL_LIBRARIES}
 )

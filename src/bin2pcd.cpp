@@ -30,7 +30,7 @@ int main(int argc, char **argv){
 	}
 	input.seekg(0, ios::beg);
  
-	pcl::PointCloud<PointXYZI>::Ptr points (new pcl::PointCloud<PointXYZI>);
+	pcl::PointCloud<PointXYZI>::Ptr pointCloud (new pcl::PointCloud<PointXYZI>);
  
 	int i;
 	for (i=0; input.good() && !input.eof(); i++) {
@@ -38,15 +38,17 @@ int main(int argc, char **argv){
 		input.read((char *) &point.x, 3*sizeof(float));
 		input.read((char *) &point.intensity, sizeof(float));
         point.intensity*=255;
-		points->push_back(point);
+		pointCloud->push_back(point);
 	}
 	input.close();
  
 	cout << "Read bin file from [" << infile << "]: "<< i << " points, writing to [" << outfile << "]"<< endl;
     
-    if (pcl::io::savePCDFileBinary(outfile, *points) == -1) 
+    if (pcl::io::savePCDFileBinary(outfile, *pointCloud) == -1) 
 	{
 		PCL_ERROR("Couldn't write file\n");
 		return false;
 	}
+
+	std::cout<<"Transform done"<<std::endl;
 }
